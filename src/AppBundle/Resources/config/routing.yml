@@ -1,0 +1,6 @@
+app_default_index:
+  path: /calculadora/{op1}/{op2}/
+  defaults: { _controller: AppBundle:Default:index, op1: 0, op2: 0 }
+  requirements:
+    op1: \d+
+    op2: \d+

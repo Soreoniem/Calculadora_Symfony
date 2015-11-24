@@ -1,0 +1,6 @@
+{% block body %}
+    {# Comentario #}
+    <h3>Resultado</h3>
+    Escogido {{ operador }}: {{ num1 }} {{ simbolo }} {{ num2 }} = {{ resultado }}.<br/>
+    Reiniciar: <a href="{{ path('app_default_calculadora') }}">{{ nombreURL }}</a>
+{% endblock %}

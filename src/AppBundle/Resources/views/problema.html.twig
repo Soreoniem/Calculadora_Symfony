@@ -1,0 +1,9 @@
+{% block body %}
+    {# Comentario #}
+    <h3>Problemas:</h3>
+    <div>
+        Problema en {{ lugarProblema }}: {{ mensajeProblema }}.<br/>
+        Prueba esta solución ({{ lugarSolucion }}): {{ mensajeSolucion }}<br/>
+        Link Solución: <a href="{{ solucionURL }}">{{ lugarSolucion }}</a>
+    </div>
+{% endblock %}

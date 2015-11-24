@@ -1,0 +1,25 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    <form method="post" action="{{ path('app_user_doUpdate') }}">
+        <input type="hidden" value="{{ user.id }}" name="id"/><br/>
+        <input type="number" value="{{ user.id }}" name="showId" disabled="disabled"/><br/>
+
+        <input type="email" value="{{ user.email }}" name="email"/><br/>
+        <input type="text" value="{{ user.password }}" name="password"/><br/>
+        <input type="text" value="{{ user.username }}" name="username"/><br/>
+
+        {{ user.createdAt|date("m/d/Y H:i:s") }}<br/>
+        {{ user.updatedAt|date("m/d/Y H:i:s") }}<br/>
+        <input type="submit" value="Actualiar"/><br/>
+    </form>
+{% endblock %}
+
+{% block body %}
+    <form method="post" action="{{ path('app_user_doInsert') }}">
+        Email: <input type="email" name="email"/><br/>
+        Password: <input type="text" name="password"/><br/>
+        Username: <input type="text" name="username"/><br/>
+        <input type="submit" name="insert"/><br/>
+    </form>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% block body %}
+    {# Comentario #}
+    <h3>{{ titulo }}</h3>
+    <form action="/calculadora/resultado"
+          name="formOperacion"
+          id="formOperacion"
+          method="post">
+
+        <!--OnFocus="this.blur()"   -> "desenfoque" (no editable)-->
+        <!--readonly="readonly"     -> solo lectura (no editable)-->
+        <input type="hidden" name="operador" value="{{ operador }}"/>
+        <input type="hidden" name="simbolo" value="{{ simbolo }}"/>
+
+        <input type="text" name="num1" value=""/>
+        {{ simbolo }}
+        <input type="text" name="num2" value=""/>
+
+        <input type="submit" name="calcular" value="Calcular"/>
+    </form>
+{% endblock %}
